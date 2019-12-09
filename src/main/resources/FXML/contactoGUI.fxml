@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="view" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+   </columnConstraints>
+   <children>
+      <TitledPane animated="false" collapsible="false" text="Teléfonos" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TableView fx:id="telefonosTable" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="141.0" prefWidth="500.0">
+                    <columns>
+                      <TableColumn fx:id="numeroColumn" minWidth="50.0" prefWidth="105.0" text="Número" />
+                      <TableColumn fx:id="tipoColumn" minWidth="50.0" prefWidth="105.0" text="Tipo" />
+                    </columns>
+                  </TableView>
+                  <VBox alignment="TOP_CENTER" layoutX="500.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="añadirTelefonoButton" mnemonicParsing="false" prefWidth="60.0" text="Añadir" />
+                        <Button fx:id="eliminarTelefonoButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Eliminar" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" text="Direcciones de correo" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TableView fx:id="emailsTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="135.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="emailsColumn" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="300.0" text="Emails" />
+                     </columns>
+                  </TableView>
+                  <VBox alignment="TOP_CENTER" layoutX="500.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="añadirEmailButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Añadir" />
+                        <Button fx:id="eliminarEmailButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Eliminar" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" collapsible="false" text="Webs" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <TableView fx:id="websTable" prefHeight="135.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="urlColumn" minWidth="50.0" prefWidth="300.0" text="URL" />
+                     </columns>
+                  </TableView>
+                  <VBox alignment="TOP_CENTER" layoutX="500.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="añadirURLButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Añadir" />
+                        <Button fx:id="eliminarURLButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Eliminar" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Separator prefHeight="6.0" prefWidth="590.0" GridPane.rowIndex="1" />
+      <Separator prefHeight="11.0" prefWidth="590.0" GridPane.rowIndex="3" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>

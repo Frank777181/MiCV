@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<GridPane fx:id="view" prefHeight="550.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="455.0" />
+      <ColumnConstraints maxWidth="143.79996337890628" minWidth="10.0" prefWidth="135.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="200.0" vgrow="ALWAYS" />
+   </rowConstraints>
+   <children>
+      <TableView fx:id="conocimientoTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="denominacionColumn" minWidth="50.0" prefWidth="100.0" text="Denominacón" />
+          <TableColumn fx:id="nivelColumn" prefWidth="75.0" text="Nivel" />
+        </columns>
+      </TableView>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1">
+         <children>
+            <Button fx:id="añadirConcimientoButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Añadir Conocimiento" />
+            <Button fx:id="añadirIdiomaButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Añadir Idioma" />
+            <Button fx:id="eliminarButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="130.0" text="Eliminar" />
+         </children>
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
